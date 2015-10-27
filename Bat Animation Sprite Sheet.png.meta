@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Bat Animation Sprite Sheet",
+		uint64 ResourceId = 56c42e6ff00a6423,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 452,
+		uint FrameSizeY = 453,
+		uint FrameCount = 40,
+		float FrameDelay = 0.0125000002,
+		float OriginX = 226,
+		float OriginY = 226,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

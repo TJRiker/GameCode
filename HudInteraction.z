@@ -1,0 +1,16 @@
+class HudInteraction : ZilchComponent
+{
+    var HudSprite : Cog;
+    
+    [Dependency]
+    var HudCreator : HudCreator;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.HudSprite = this.Owner.HudCreator.HudSpace.FindObjectByName("HudSprite");
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

@@ -1,0 +1,43 @@
+class Movement : ZilchComponent
+{
+    [Property]
+    var Speed : Real = 0.5;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // When "W" is pressed or held, the player will go up.
+        if(Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            var temp = this.Owner.Transform.Translation;
+            temp.Y +=this.Speed;
+            this.Owner.Transform. Translation = temp;
+        }
+        // When "A" is pressed or held, the player will go left.
+        if(Zero.Keyboard.KeyIsDown(Keys.A))
+        {
+            this.Owner.Sprite.FlipX = false;
+            var temp = this.Owner.Transform.Translation;
+            temp.X -=this.Speed;
+             this.Owner.Transform. Translation = temp;
+        }
+        // When "S" is pressed or held, the player will go down.
+        if(Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            var temp = this.Owner.Transform.Translation;
+            temp.Y-=this.Speed;
+            this.Owner.Transform. Translation = temp;
+        }
+        //When "D" is pressed or held , the player will go right.
+        if(Zero.Keyboard.KeyIsDown(Keys.D))
+        {
+             this.Owner.Sprite.FlipX = true;
+            var temp = this.Owner.Transform.Translation;
+            temp.X+=this.Speed;
+            this.Owner.Transform.Translation = temp;
+        }
+    }
+}

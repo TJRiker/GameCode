@@ -1,0 +1,82 @@
+class ManaScript : ZilchComponent
+{
+[Property]
+var Mana : Real = 100;
+[Property]
+var Mana100 : SpriteSource = null;
+[Property]
+var Mana90 : SpriteSource = null;
+[Property]
+var Mana80 : SpriteSource = null;
+[Property]
+var Mana70 : SpriteSource = null;
+[Property]
+var Mana60 : SpriteSource = null;
+[Property]
+var Mana50 : SpriteSource = null;
+[Property]
+var Mana40 : SpriteSource = null;
+[Property]
+var Mana30 : SpriteSource = null;
+[Property]
+var Mana20 : SpriteSource = null;
+[Property]
+var Mana10 : SpriteSource = null;
+[Property]
+var Mana0 : SpriteSource = null;
+
+
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Mana += 0.1;
+        if(this.Mana>= 100)
+        {
+            this.Mana = 100;
+            this.Owner.Sprite.SpriteSource = this.Mana100;
+        }
+        else if(this.Mana >= 90)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana90;
+        }                 
+        else if(this.Mana >= 80)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana80;
+        }
+        else if(this.Mana >= 70)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana70;
+        }
+        else if(this.Mana >= 60)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana60;
+        }
+        else if(this.Mana >= 50)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana50;
+        }
+        else if(this.Mana >= 40)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana40;
+        }
+        else if(this.Mana >= 30)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana30;
+        }
+        else if(this.Mana >= 20)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana20;
+        }
+        else if(this.Mana >= 10)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana10;
+        }
+        else if(this.Mana < 10)
+        {
+            this.Owner.Sprite.SpriteSource = this.Mana0;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+class HealthScript : ZilchComponent
+{
+    [Property]
+    var Health : Real = 100;
+    [Property]
+    var Health100 : SpriteSource = null;
+    [Property]
+    var Health90 : SpriteSource = null;
+    [Property]
+    var Health80 : SpriteSource = null;
+    [Property]
+    var Health70 : SpriteSource = null;
+    [Property]
+    var Health60 : SpriteSource = null;
+    [Property]
+    var Health50 : SpriteSource = null;
+    [Property]
+    var Health40 : SpriteSource = null;
+    [Property]
+    var Health30 : SpriteSource = null;
+    [Property]
+    var Health20 : SpriteSource = null;
+    [Property]
+    var Health10 : SpriteSource = null;
+    [Property]
+    var Health0 : SpriteSource = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Health >= 100)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health100;
+            this.Health = 100;
+        }
+        else if(this.Health >= 90)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health90;
+        }                 
+        else if(this.Health >= 80)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health80;
+        }
+        else if(this.Health >= 70)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health70;
+        }
+        else if(this.Health >= 60)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health60;
+        }
+        else if(this.Health >= 50)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health50;
+        }
+        else if(this.Health >= 40)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health40;
+        }
+        else if(this.Health >= 30)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health30;
+        }
+        else if(this.Health >= 20)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health20;
+        }
+        else if(this.Health >= 10)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health10;
+        }
+        else if(this.Health <= 10)
+        {
+            this.Owner.Sprite.SpriteSource = this.Health0;
+        }
+               
+                if (this.Health <= 0)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("Death"));
+            this.Space.ReloadLevel();
+        }
+    }
+}

@@ -1,0 +1,82 @@
+class ChaseEnemy : ZilchComponent
+{
+        // Pacing Properties and Variables
+    [Property]
+    var ChaseSpeed : Real = 20.0;
+    [Property]
+    var PaceSpeed : Real = 8.0;
+    [Property]
+    var MaxMoveDistance : Real = 10.0;
+    [Property]
+    var PaceDirection : Real3 = Real3(0.0,1.0,0.0);
+    var StartPosition : Real3 = Real3();
+    
+    // Chasing Properties and variables
+    [Property]
+    var TargetObject: CogPath = null;
+    [Property]
+    var ChaseTriggerDistance: Real = 15.0;
+    var DistanceFromTarget: Real = 0.0;
+    var ChaseDirection: Real3 = Real3();
+    var TargetIsWithinRange: Boolean = false;
+
+    //Dependencies
+    [Dependency]
+    var Transform : Transform = null;
+    [Dependency]
+    var Sprite : Sprite = null;
+        
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.StartPosition = this.Owner.Transform.Translation;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.TargetIsWithinRange = false;
+        
+        if (this.TargetObject.Cog != null)
+        {
+            this.CalculateChaseDirectionAndDistance();
+            this.TargetIsWithinRange = (this.DistanceFromTarget <= this.ChaseTriggerDistance);
+            if (this.TargetIsWithinRange)
+            {
+                this.ChaseTarget(event);
+            }
+            else
+            {
+                this.PaceBackAndForth(event);
+            }
+        }
+    }
+    
+        function PaceBackAndForth(event: UpdateEvent)
+    {
+        var displacement = this.Owner.Transform.Translation - this.StartPosition;
+        var distanceFromStart = Math.Length(displacement);
+
+        // If we have travelled past our max distance
+        if (distanceFromStart >= this.MaxMoveDistance)
+           {
+             // Change direction to go back the way we came
+             this.PaceDirection = -displacement;
+           }
+
+           // Ensure the PaceDirection is only a direction via normlization
+           this.PaceDirection = Math.Normalize(this.PaceDirection);
+          this.Owner.Transform.Translation += this.PaceDirection * event.Dt * this.PaceSpeed;
+    }
+    
+    function CalculateChaseDirectionAndDistance()
+    {
+        this.ChaseDirection = this.TargetObject.Cog.Transform.Translation - this.Owner.Transform.Translation;
+        this.DistanceFromTarget = Math.Length(this.ChaseDirection);
+        this.ChaseDirection = Math.Normalize(this.ChaseDirection);
+    }
+    function ChaseTarget(event: UpdateEvent)
+    {
+        this.Owner.Transform.Translation += this.ChaseDirection * event.Dt * this.ChaseSpeed;
+    }
+
+}

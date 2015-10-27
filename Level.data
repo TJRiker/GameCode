@@ -1,0 +1,2066 @@
+Level = 
+{
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 1,
+		},
+		Named = 
+		{
+			string Name = "LevelSettings",
+		},
+		GravityEffect = 
+		{
+			bool Active = false,
+			bool WakeUpOnChange = false,
+			bool LocalSpaceDirection = true,
+			float Strength = 10,
+			Vec3 Direction = [0, -1, 0],
+		},
+		DragEffect = 
+		{
+			bool Active = false,
+			bool WakeUpOnChange = false,
+			float Drag = 0.699999988,
+		},
+		CameraViewport = 
+		{
+			bool Background = true,
+			Vec2 Offset = [0, 0],
+			Vec2 Size = [1, 1],
+			int Layer = 0,
+			bool Active = true,
+			bool Blocking = true,
+			CogPath Renderer = 
+			{
+				string Path = ".",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 1,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			ViewportScaling Scaling = Fill,
+			Vec2 Resolution = [1280, 720],
+			Vec4 MarginColor = [0, 0, 0, 1],
+		},
+		ForwardRenderer = 
+		{
+			Vec4 ClearColor = [0.156862751, 0.156862751, 0.156862751, 1],
+			bool DrawNonVisible = false,
+			bool DrawDebugObjects = true,
+			bool DrawEditorIcons = true,
+			bool EditorIconDepth = true,
+			bool Wireframe = false,
+		},
+		GridDraw = 
+		{
+			bool Active = true,
+			bool HalfCellOffset = false,
+			float CellSize = 1,
+			GridAxis Axis = ZAxis,
+			int Lines = 100,
+			bool DrawAxisOrigins = true,
+			bool AlwaysDrawInEditor = true,
+			bool DrawInGame = false,
+			Vec4 GridColor = [0.5, 0.5, 0.5, 0.400000006],
+			Vec4 GridHiLight = [0, 0, 0, 0.400000006],
+			int HilightInterval = 10,
+			bool FollowEditorCamera = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Named = 
+		{
+			string Name = "EditorCamera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26.1035137, -7.90322495, 49.9999962],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
+		},
+		Camera = 
+		{
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			CameraTransparentSort TransparentSort = ZDepth,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 500,
+			float Size = 30.1194496,
+		},
+		EditorCameraController = 
+		{
+			ControlMode ControlMode = ZPlane,
+			float LookDistance = 50,
+			float VerticalAngle = 0,
+			float HorizontalAngle = 0,
+			Vec3 LookTarget = [26.1035137, -7.90322495, -3.10785776e-006],
+			float MoveSensitivity = 1,
+		},
+		EditorRenderer = 
+		{
+			Vec4 ClearColor = [0.155000001, 0.155000001, 0.155000001, 1],
+			bool DrawNonVisible = true,
+			bool DrawDebugObjects = true,
+			bool DrawEditorIcons = true,
+			bool Wireframe = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Staff",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.173851788, 0.440521926, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "56a46e392ff60489:Staff Animation Rotation Sprite Sheet",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		FaceMouse = 
+		{
+		},
+		StaffMovement = 
+		{
+		},
+		Orientation = 
+		{
+			Vec3 GlobalUp = [0, 0, 1],
+			Vec3 UpVector = [0, -0, 1],
+			Vec3 ForwardVector = [0.999996722, -0.00258374214, 0],
+			OrientationBases DefaultBases = Custom,
+		},
+		FireBall = 
+		{
+			float FireSpeed = 20,
+		},
+		FrostBolt = 
+		{
+			float FireSpeed = 25,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
+			string Name = "Wizard",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.047791481, 1.87552989, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "56a46ffa5ddc82b5:WizardIdle",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Movement = 
+		{
+			float Speed = 0.200000003,
+		},
+		WizardAnimation = 
+		{
+			string WizardIdle = "56a46ffa5ddc82b5:WizardIdle",
+			string WizardWalk = "56a46f9b5af00fa4:WizardWalk",
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "56ecb42fe168001b:Wizard",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2, 4, 0.5],
+		},
+		CollisionWithBat = 
+		{
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			bool Positional = true,
+			int Version = 1,
+		},
+		CollisionWithSlime = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 2,
+				},
+				Named = 
+				{
+					string Name = "Camera",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.131740332, -1.20869827, 40.0000038],
+					Vec3 Scale = [1, 1.00000012, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					ProjectionMode ProjectionMode = Orthographic,
+					Facing Facing = NegativeZ,
+					CameraTransparentSort TransparentSort = InheritFromSpace,
+					float FieldOfView = 45,
+					float NearPlane = 0.5,
+					float FarPlane = 200,
+					float Size = 50,
+				},
+				SoundListener = 
+				{
+					bool Active = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 6,
+				},
+				Named = 
+				{
+					string Name = "Mana Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.57149696, -22.4647388, 5],
+					Vec3 Scale = [3, 3, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "56c0b4746271c63c:100 Mana",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 50,
+					string Text = "",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+				ManaScript = 
+				{
+					float Mana = 100,
+					string Mana100 = "56c0b4746271c63c:100 Mana",
+					string Mana90 = "56c0b47d60b7432d:90 Mana",
+					string Mana80 = "56c0b464671f92be:80 Mana",
+					string Mana70 = "56c0b46d65733409:70 Mana",
+					string Mana60 = "56c0b41a6bb3a1a0:60 Mana",
+					string Mana50 = "56c0b403699a6483:50 Mana",
+					string Mana40 = "56c0b40b681e63b4:40 Mana",
+					string Mana30 = "56c0b4336e952b01:30 Mana",
+					string Mana20 = "56c0b43e6c425ffa:20 Mana",
+					string Mana10 = "56c0b425727f6fcd:10 Mana",
+					string Mana0 = "56c0b42c70defe50:0 Mana",
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 7,
+				},
+				Named = 
+				{
+					string Name = "Health Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.57149982, -22.4647007, 5],
+					Vec3 Scale = [3, 3, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "56c0b4d876451913:100 Health",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				HealthScript = 
+				{
+					float Health = 100,
+					string Health100 = "56c0b4d876451913:100 Health",
+					string Health90 = "56c0b4c174f9be3e:90 Health",
+					string Health80 = "56c0b4f27a20c2fe:80 Health",
+					string Health70 = "56c0b4f97fc6c096:70 Health",
+					string Health60 = "56c0b4eb7d1c5aa3:60 Health",
+					string Health50 = "56c0b49642c364ec:50 Health",
+					string Health40 = "56c0b48240ae0d94:40 Health",
+					string Health30 = "56c0b48e467e0b40:30 Health",
+					string Health20 = "56c0b4b4446278c1:20 Health",
+					string Health10 = "56c0b4a34a2432f0:10 Health",
+					string Health0 = "56c0b42c70defe50:0 Mana",
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 50,
+					string Text = "",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 8,
+				},
+				Named = 
+				{
+					string Name = "Globe Holder",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.00379040837, -24.3965912, 5],
+					Vec3 Scale = [3.29999995, 3, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "56c21ea8d8f16d12:Globe Holder",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "Cursor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.62466526, 0.49812305, 7.77436711e-008],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "56cbe9cbe6479cf9:Mouse Cursor",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MouseCursor = 
+		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [54.0761108, 14.2378674, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [54.3918915, -13.7621365, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [58.3918915, 12.8694439, 0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [63.0234642, 13.8168106, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [62.5331841, -17.1369171, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [70.343338, 17.2469025, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [66.3430023, 17.4373913, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [71.6767807, -15.6129875, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [76.3438492, 31.057579, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [79.7727127, 41.820385, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [82.8205643, 53.7261429, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [78.2487793, 49.2495728, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [71.5815277, 29.1526566, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [77.5820694, -15.3272572, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [83.6778183, -9.32675648, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [91.487999, 2.86473846, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [96.8217697, 15.9134493, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [100.813004, 20.445528, 0.099999994],
+			Vec3 Scale = [4.57375622, 5.72437239, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 28,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [106.441605, 23.8188705, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 29,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [90.896492, 58.8692398, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [105.632339, 62.0438652, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [98.2606354, 63.7465134, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [113.263756, 60.9545097, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [122.00058, 52.3229294, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [125.684799, 42.8492432, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [128.10585, 32.8492355, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [112.10585, 13.1650295, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 37,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [88.5269089, -3.25602055, -3.43322754e-005],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 38,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [107.684792, -4.41391516, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 39,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [134.000595, 25.9018726, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 40,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [138.421646, 11.7966108, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 41,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [112.319397, -18.2351475, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 42,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [109.582565, -1.18251228, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 43,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [142.845612, -1.07726431, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 44,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [145.266663, -8.02463627, 0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 45,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [116.003563, -35.0772552, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 46,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [126.003571, -44.2351532, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 47,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [135.477264, -51.8140945, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 48,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [152.635132, -16.9719925, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 49,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [159.477249, -26.9719906, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 50,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [168.845673, -36.1298828, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 51,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [143.319321, -59.2877846, 0],
+			Vec3 Scale = [4.61548996, 5.35771656, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 52,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [162.00354, -76.761467, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 53,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [170.00354, -73.3930435, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 54,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [178.950912, -68.4456711, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 55,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [187.161438, -65.2877808, 3.81469727e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 56,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [155.371933, -86.9719315, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 57,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [136.108765, -71.8140182, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 58,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [148.108749, -100.761398, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 59,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [126.740334, -74.5508728, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [133.687698, -104.656143, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 61,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [122.740326, -112.550873, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 62,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [140.740326, -103.498245, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 63,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [116.529793, -76.7614212, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 64,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [106.214005, -82.6561584, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 65,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [113.056114, -117.287743, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 66,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [96.7403183, -89.919281, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 67,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [105.898216, -120.024559, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 68,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [58.8455772, -121.919289, -0.200000003],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 69,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [65.2666321, -114.024551, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 70,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [69.6876831, -107.6035, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 71,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [76.7403107, -102.656128, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 72,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [72.8455658, -104.55088, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 73,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [81.0560989, -97.7087631, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 74,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [61.2666359, -145.6035, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 75,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [87.8982086, -96.7613983, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34be7d3b0020:PineTree3",
+		LinkId = 
+		{
+			uint Id = 76,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [100.003464, -127.182457, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 77,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [93.7929382, -129.28772, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 78,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [88.9508362, -132.024567, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 79,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [83.1613617, -132.971924, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 80,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [86.5297852, -144.761398, 7.62939453e-006],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 81,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [78.6351089, -139.182419, 0],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 82,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [62.6351089, -116.129791, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f349f447f7047:PineTree2",
+		LinkId = 
+		{
+			uint Id = 83,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [74.5298386, -151.49823, -0.100000024],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 84,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [64.6351089, -133.60347, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f34a6784f7c69:PineTree4",
+		LinkId = 
+		{
+			uint Id = 85,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [70.3193207, -139.919266, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569f37065ef7fd45:PineTree1",
+		LinkId = 
+		{
+			uint Id = 86,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [59.4772148, -127.814003, -0.100000001],
+			Vec3 Scale = [3.08722305, 3.75771666, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PineTree1",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 87,
+		},
+		Named = 
+		{
+			string Name = "Slime",
+		},
+		Archetyped = 
+		{
+			string Name = "569ef3add45e8c87:Slime",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [80.0036392, -120.34034, 0],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "56ca16ae1c229eaa:Slime Animation Sprite Sheet",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0.5,
+			uint StartFrame = 0,
+		},
+		ChaseEnemy = 
+		{
+			float ChaseSpeed = 8,
+			float PaceSpeed = 4,
+			float MaxMoveDistance = 5,
+			Vec3 PaceDirection = [1, 0, 0],
+			CogPath TargetObject = 
+			{
+				string Path = ":/Wizard",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 5,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float ChaseTriggerDistance = 15,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2, 1, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		SlimeEnemyHP = 
+		{
+			float Health = 10,
+		},
+		EnemyAnimation = 
+		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569ef3add45e8c87:Slime",
+		LinkId = 
+		{
+			uint Id = 88,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [170.214249, -54.5508804, 3.81469727e-006],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Slime",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569ef3b7d51f1be0:Bat",
+		LinkId = 
+		{
+			uint Id = 89,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [133.582672, -23.3929768, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Bat",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569ef3b7d51f1be0:Bat",
+		LinkId = 
+		{
+			uint Id = 90,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [118.740562, 24.5017567, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Bat",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "569ef3b7d51f1be0:Bat",
+		LinkId = 
+		{
+			uint Id = 91,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [86.5300217, 20.6070175, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Bat",
+		},
+	},
+},

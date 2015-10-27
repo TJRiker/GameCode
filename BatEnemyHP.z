@@ -1,0 +1,54 @@
+class BatEnemyHP : ZilchComponent
+{
+    [Property]
+    var Health : Real = 2;
+    var White : Real4 = Real4(1.0,1.0,1.0,1.0);
+    var Blue : Real4 = Real4(0.0,1.0,1.0,1.0);
+    var Time : Integer = 120;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Health <= 0)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("BatDeath"));
+            this.Owner.Destroy();
+        }
+        
+        if(this.Owner.Sprite.Color == this.Blue)
+        {
+            this.Time -=1;
+        }
+        if(this.Time == 0)
+        {
+            this.Owner.ChaseEnemy.ChaseSpeed = 20;
+            this.Owner.ChaseEnemy.PaceSpeed = 8;
+            this.Owner.Sprite.Color = this.White;
+            this.Owner.Sprite.AnimationSpeed = 1.0;
+        }
+    
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "FireBall")
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("FireBallHit"));
+            this.Health -=1;
+        }
+        else if(event.OtherObject.Name == "FrostBolt")
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("FrostBoltHit"));
+            this.Health -=1;
+            this.Owner.Sprite.Color = this.Blue;
+            this.Owner.ChaseEnemy.ChaseSpeed = 3.0;
+            this.Owner.ChaseEnemy.PaceSpeed = 1.0;
+            this.Owner.Sprite.AnimationSpeed = 0.3;
+        }
+    }
+}
+

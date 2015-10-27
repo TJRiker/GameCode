@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "SlimeEnemyHP",
+		uint64 ResourceId = 56ca192f7c7d1952,
+	},
+},

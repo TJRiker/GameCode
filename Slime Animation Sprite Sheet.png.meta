@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Slime Animation Sprite Sheet",
+		uint64 ResourceId = 56ca16ae1c229eaa,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 317,
+		uint FrameSizeY = 110,
+		uint FrameCount = 40,
+		float FrameDelay = 0.0166666675,
+		float OriginX = 158,
+		float OriginY = 55,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

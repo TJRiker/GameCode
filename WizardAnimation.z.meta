@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "WizardAnimation",
+		uint64 ResourceId = 56a407409c3ad830,
+	},
+},

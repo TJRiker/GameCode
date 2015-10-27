@@ -1,0 +1,12 @@
+class HudChangesLevel : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        var gameSpace = this.GameSession.FindSpaceByName("Main");
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

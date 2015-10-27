@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "ManaScript",
+		uint64 ResourceId = 56aa8a26cedd5f20,
+	},
+},

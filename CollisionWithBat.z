@@ -1,0 +1,80 @@
+class CollisionWithBat : ZilchComponent
+{
+    var Time : Integer = 60;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var rand = Random();
+        var painSoundTable = ResourceTable.Find("PainSoundsTable");
+        var sound = painSoundTable.SampleValue(rand.Range(0.0, 1.0), rand.Range(0.0, 1.0));
+        if(this.Time == 0 || this.Time == -60 || this.Time == -120 || this.Time == -180 || this.Time == -240 || this.Time == -300 || this.Time == -360 || this.Time == -420 || this.Time == -480)
+        {
+            this.Space.FindObjectByName("Health Sprite").HealthScript.Health -=10;
+        }
+        if(this.Time == 0)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+        if(this.Time == -60)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+        if(this.Time == -120)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+        if(this.Time == -180)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+        if(this.Time == -240)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+        if(this.Time == -300)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+        if(this.Time == -360)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+        if(this.Time == -420)
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var rand = Random();
+        var painSoundTable = ResourceTable.Find("PainSoundsTable");
+        var sound = painSoundTable.SampleValue(rand.Range(0.0, 1.0), rand.Range(0.0, 1.0));
+
+        if(event.OtherObject.Name == "Bat")
+        {
+            this.Space.FindObjectByName("Health Sprite").HealthScript.Health -=10;
+            this.Space.SoundSpace.PlayCue(SoundCue.Find(sound));
+        }
+    }
+        function OnCollisionPersisted(event : CollisionEvent)
+        {
+            if(event.OtherObject.Name == "Bat")
+            {
+                this.Time -=1;
+            }
+        }
+        
+        function OnCollisionEnded(event : CollisionEvent)
+        {
+            this.Time = 60;
+        }
+    
+}

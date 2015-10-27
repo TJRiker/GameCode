@@ -1,0 +1,48 @@
+ResourceTable = 
+{
+	string ResourceType = "SoundCue",
+	Array EntryList = 
+	[
+		{
+			string Name = "Pain 1",
+			string Value = "56c44f5d2591a935:Pain1",
+			float Weight = 1,
+		},
+		{
+			string Name = "Pain 2 ",
+			string Value = "56c44f5a2723827a:Pain2",
+			float Weight = 1,
+		},
+		{
+			string Name = "Pain 3",
+			string Value = "56c44eac20cc0e12:Pain3",
+			float Weight = 1,
+		},
+		{
+			string Name = "Pain 4",
+			string Value = "56c44ea422f1e73f:Pain4",
+			float Weight = 1,
+		},
+		{
+			string Name = "Pain 5",
+			string Value = "56c44ebd23c84c66:Pain5",
+			float Weight = 1,
+		},
+		{
+			string Name = "Pain 6",
+			string Value = "56c44eb8dd2dadb8:Pain6",
+			float Weight = 1,
+		},
+		{
+			string Name = "Pain 7 ",
+			string Value = "56c44e8fdfa7e379:Pain7",
+			float Weight = 1,
+		},
+		{
+			string Name = "Pain 8",
+			string Value = "56c44e86d964a43a:Pain8",
+			float Weight = 1,
+		},
+	],
+	float MaxWeight = 1,
+},

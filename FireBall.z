@@ -1,0 +1,36 @@
+class FireBall : ZilchComponent
+{
+    [Property]
+    var FireSpeed : Real = 10.0;
+    var Projectile: Archetype = Archetype.Find("FireBall");
+
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.LevelSettings, Events.LeftMouseDown, this.OnMouseDown);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+     
+    }
+    function OnMouseDown(event : ViewportMouseEvent)
+        {
+            if(this.Space.FindObjectByName("Mana Sprite").ManaScript.Mana >= 10)
+            {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("FireBallSound"));
+            var mousePosition = event.ToWorldZPlane(0);
+            var spawnPosition = this.Owner.Transform.Translation;
+            var targetDirection = mousePosition - spawnPosition;
+            var createdProjectile = this.Space.CreateAtPosition(this.Projectile, spawnPosition);
+            createdProjectile.RigidBody.Velocity = targetDirection;
+            targetDirection = Math.Normalize(targetDirection);
+            this.Space.FindObjectByName("Mana Sprite").ManaScript.Mana -= 10;
+        
+
+       
+            var fireVelocity = targetDirection * this.FireSpeed;
+
+            createdProjectile.RigidBody.Velocity = fireVelocity;
+    }
+    }
+}

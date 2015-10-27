@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Staff Animation Rotation Sprite Sheet",
+		uint64 ResourceId = 56a46e392ff60489,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 465,
+		uint FrameSizeY = 127,
+		uint FrameCount = 40,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 232,
+		float OriginY = 63,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

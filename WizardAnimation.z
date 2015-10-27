@@ -1,0 +1,32 @@
+class WizardAnimation : ZilchComponent
+{
+    [Property]
+    var WizardIdle : SpriteSource = null;
+    [Property]
+    var WizardWalk : SpriteSource = null;
+
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+         // standing state
+      if(this.Owner.Sprite.SpriteSource == this.WizardIdle)
+      {
+          if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.D))
+          {
+              this.Owner.Sprite.SpriteSource = this.WizardWalk;
+          }
+      }
+      // walking state
+      else if(this.Owner.Sprite.SpriteSource == this.WizardWalk)
+      {
+          if(Zero.Keyboard.KeyIsUp(Keys.W) && Zero.Keyboard.KeyIsUp(Keys.A) && Zero.Keyboard.KeyIsUp(Keys.S) && Zero.Keyboard.KeyIsUp(Keys.D))
+          {
+              this.Owner.Sprite.SpriteSource = this.WizardIdle; 
+          }
+      }
+}
+}
